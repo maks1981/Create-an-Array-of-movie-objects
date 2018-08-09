@@ -1,0 +1,64 @@
+//              movieDataBase exercise
+
+// Create an array of movie objects. 
+// Each movie should have a title, rating, and hasWatched properties. 
+// Iterate through the array and print out something like below example:
+// You have watched "Missian Impossible" - 5 stars
+// You have not seen "Avengers" - 4.5 stars
+// You have not seen "Anaconda" - 3.5 stars
+
+
+var movies = [
+    {
+        title: "Missian Impossible",
+        hasWatched: true,
+        rating: 5
+    },
+    {
+        title: "Avengers",
+        hasWatched: false,
+        rating: 4.5
+    },
+    {   title: "Anaconda",
+        hasWatched: false,
+        rating: 3.5                                                         
+    }                                                                       
+    ] // enter
+undefined
+
+movies.forEach(function(movie){
+    var result = "You have ";
+    if(movie.hasWatched){
+        result += "watched ";
+    } else {
+        result += "not seen ";
+    } result += "\"" + movie.title + "\" - ";
+    result += movie.rating + " stars";
+    console.log(result)
+}); // enter
+You have watched "Missian Impossible" - 5 stars
+You have not seen "Avengers" - 4.5 stars
+You have not seen "Anaconda" - 3.5 stars
+undefined
+
+// another option with simple group "builtString"
+
+function builtString(movie){
+    var result = "You have ";
+    if(movie.hasWatched){
+        result += "watched ";
+    } else {
+        result += "not seen ";
+    } result += "\"" + movie.title + "\" - ";
+    result += movie.rating + " stars";
+    return result;
+} // enter
+undefined
+movies.forEach(function(movie){
+    console.log(builtString(movie));
+}); // enter
+You have watched "Missian Impossible" - 5 stars
+You have not seen "Avengers" - 4.5 stars
+You have not seen "Anaconda" - 3.5 stars
+undefined
+
