@@ -62,3 +62,12 @@ You have not seen "Avengers" - 4.5 stars
 You have not seen "Anaconda" - 3.5 stars
 undefined
 
+// we can also add some dates like that
+
+movies.push({
+	title: "Some movie",
+	hasWatched: true,
+	rating: 3.5
+});
+ 
+
